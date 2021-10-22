@@ -1,0 +1,25 @@
+{
+  "name": "nasa_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "__comment__": "--prefix will look for folder in which to run the command",
+    "__comment1__": "&& wil wait for first command to fins=ish and then execute second command, & will execute both the commands side by side",
+    "client": "npm run start --prefix client",
+    "server": "npm run watch --prefix server",
+    "watch": "npm run server & npm run client",
+    "test": "npm run test --prefix server && npm run test --prefix client",
+    "install-client": "npm install --prefix client",
+    "install-server": "npm install --prefix server",
+    "install": "npm run install-client && npm run install-server",
+    "deploy": "npm run build --prefix client && npm run start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4"
+  }
+}
